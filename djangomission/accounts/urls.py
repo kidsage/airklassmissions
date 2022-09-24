@@ -1,10 +1,13 @@
 from django.urls import path, include
-from . import views
-from rest_framework import urls
-from accounts.views import UserCreate
+from accounts.views import IndividualOnlyView, IndividualSignupView, MasterOnlyView, MasterSignupView, CustomAuthToken, LogoutView
 
+app_name = 'accounts'
 
 urlpatterns = [
-    path('signup/', UserCreate.as_view()),
-    path('api-auth/', include('rest_framework.urls')),
- ]
+    path('signup/individual', IndividualSignupView.as_view()),
+    path('signup/master', MasterSignupView.as_view()),
+    path('login', CustomAuthToken.as_view()),
+    path('logout', LogoutView.as_view()),
+    path('individual/dashboard', IndividualOnlyView.as_view()),
+    path('master/dashboard', MasterOnlyView.as_view()),
+ ] 

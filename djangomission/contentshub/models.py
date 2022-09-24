@@ -1,10 +1,7 @@
 from django.db import models
-
-
-class Master(models.Model):
-    name = models.CharField(max_length=10)
-
+from accounts.models import Master
 
 class Klass(models.Model):
-    master = models.ForeignKey('contentshub.Master', on_delete=models.CASCADE)
+    writer = models.ForeignKey(Master, on_delete=models.CASCADE)
     title = models.CharField(max_length=50)
+    content = models.TextField(null=True)
