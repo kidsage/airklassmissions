@@ -21,10 +21,11 @@ class QuestionSerializer(serializers.ModelSerializer):
 class QuestionListSerializer(serializers.ModelSerializer):
     answer = serializers.SerializerMethodField()
     writer = serializers.ReadOnlyField(source='writer.username')
+    klass_id = serializers.ReadOnlyField(source='klass.id')
 
     class Meta:
         model = Question
-        fields = ['id', 'writer', 'content', 'answer']
+        fields = ['id', 'klass_id', 'writer', 'content', 'answer']
 
 
     def get_answer(self, obj):
@@ -37,10 +38,11 @@ class QuestionListSerializer(serializers.ModelSerializer):
 class QuestionDetailSerializer(serializers.ModelSerializer):
     answer = serializers.SerializerMethodField()
     writer = serializers.ReadOnlyField(source='writer.username')
+    klass_id = serializers.ReadOnlyField(source='klass.id')
 
     class Meta:
         model = Question
-        fields = ['id', 'writer', 'content', 'answer']
+        fields = ['id', 'klass_id', 'writer', 'content', 'answer']
 
 
     def get_answer(self, obj):

@@ -54,7 +54,6 @@ class QuestionDetailVIew(generics.RetrieveUpdateDestroyAPIView):
             return Response("delete question successfully!", status=status.HTTP_200_OK)
         
 
-
 class AnswerCreateView(generics.CreateAPIView):
     queryset = Answer.objects.all()
     serializer_class = AnswerSerializer
@@ -74,7 +73,7 @@ class AnswerCreateView(generics.CreateAPIView):
         return Response(serializer.data, status=status.HTTP_400_BAD_REQUEST)
 
 
-class AnswerDetailVIew(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Answer.objects.all()
-    serializer_class = AnswerSerializer
-    permission_classes = [AllowAny]
+# class AnswerListVIew(generics.RetrieveUpdateDestroyAPIView):
+#     queryset = Answer.objects.all()
+#     serializer_class = AnswerSerializer
+#     permission_classes = [AllowAny]
