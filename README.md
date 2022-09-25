@@ -1,2 +1,4 @@
 # airklassmissions
-채용시, 지원자에게 과제를 제시합니다.
+
+## 지원자 : 김석주
+## djangomission 내부의 readme를 확인해주세요.
