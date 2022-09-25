@@ -66,8 +66,7 @@ header
 
 ##### create question [GET] http://127.0.0.1:8000/community/question/create/[id] <- id는 klass_id 번호를 넣어주시면 됩니다.
 - require
-```
-json
+```json
 {
   "content" : "str"
 }
@@ -75,8 +74,7 @@ json
 
 ##### question detail [GET, PUT(UPDATE), DELETE] http://127.0.0.1:8000/community/question/create/[id] <- id는 question_id 번호를 넣어주시면 됩니다.
 - require : GET, DELETE는 없습니다.
-```
-json
+```json
 {
   "content" : "str"
 }
@@ -84,8 +82,7 @@ json
 
 ##### create answer [GET] http://127.0.0.1:8000/community/answer/create/[id] <- id는 question_id 번호를 넣어주시면 됩니다.
 - require
-```
-json
+```json
 {
   "content" : "str"
 }
